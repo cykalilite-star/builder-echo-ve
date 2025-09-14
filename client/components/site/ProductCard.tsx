@@ -26,7 +26,9 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
       <div className="p-4">
         <h3 className="font-semibold leading-tight">{product.name}</h3>
-        <p className="mt-1 text-sm text-muted-foreground">Rp {product.price.toLocaleString("id-ID")}</p>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Rp {product.price.toLocaleString("id-ID")}
+        </p>
         <div className="mt-3 flex items-center gap-2">
           <Button className="flex-1">Add to cart</Button>
           <Button variant="secondary" asChild>

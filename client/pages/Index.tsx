@@ -31,18 +31,35 @@ export default function Index() {
       <Hero />
 
       <section className="container py-12 md:py-16">
-        <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-primary">Belanja berdasarkan kategori</h2>
+        <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-primary">
+          Belanja berdasarkan kategori
+        </h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <CategoryCard title="Baju Batik" description="Kemeja, dress dan outer batik modern." />
-          <CategoryCard title="Tas Batik" description="Tote, sling dan pouch handmade." gradient="from-[#fb923c] via-[#f97316] to-[#f43f5e]" />
-          <CategoryCard title="Handycraft" description="Souvenir & dekor batik pilihan." gradient="from-[#facc15] via-[#fb923c] to-[#f97316]" />
+          <CategoryCard
+            title="Baju Batik"
+            description="Kemeja, dress dan outer batik modern."
+          />
+          <CategoryCard
+            title="Tas Batik"
+            description="Tote, sling dan pouch handmade."
+            gradient="from-[#fb923c] via-[#f97316] to-[#f43f5e]"
+          />
+          <CategoryCard
+            title="Handycraft"
+            description="Souvenir & dekor batik pilihan."
+            gradient="from-[#facc15] via-[#fb923c] to-[#f97316]"
+          />
         </div>
       </section>
 
       <section className="container py-12 md:py-16">
         <div className="flex items-end justify-between gap-4">
-          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-primary">Produk unggulan</h2>
-          <Button asChild variant="secondary"><Link to="/shop">Lihat semua</Link></Button>
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-primary">
+            Produk unggulan
+          </h2>
+          <Button asChild variant="secondary">
+            <Link to="/shop">Lihat semua</Link>
+          </Button>
         </div>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((p) => (
@@ -54,14 +71,26 @@ export default function Index() {
       <section className="container py-12 md:py-16">
         <div className="grid gap-8 md:grid-cols-2 items-center">
           <div>
-            <h3 className="text-2xl font-extrabold tracking-tight text-primary">Wiru Batik & Craft</h3>
+            <h3 className="text-2xl font-extrabold tracking-tight text-primary">
+              Wiru Batik & Craft
+            </h3>
             <p className="mt-3 text-muted-foreground">
-              Setiap produk dibuat dengan teliti oleh perajin lokal di Bantul. Kami memadukan motif klasik seperti Parang dan Mega Mendung dengan potongan masa kini.
+              Setiap produk dibuat dengan teliti oleh perajin lokal di Bantul.
+              Kami memadukan motif klasik seperti Parang dan Mega Mendung dengan
+              potongan masa kini.
             </p>
             <div className="mt-6 flex gap-3">
-              <Button asChild><Link to="/shop">Mulai belanja</Link></Button>
+              <Button asChild>
+                <Link to="/shop">Mulai belanja</Link>
+              </Button>
               <Button variant="secondary" asChild>
-                <a href="https://wa.me/6281806793324" target="_blank" rel="noreferrer noopener">Konsultasi desain</a>
+                <a
+                  href="https://wa.me/6281806793324"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Konsultasi desain
+                </a>
               </Button>
             </div>
           </div>
@@ -69,7 +98,12 @@ export default function Index() {
             <div className="rounded-2xl bg-white p-6">
               <div className="grid grid-cols-3 gap-4">
                 {featured.map((p) => (
-                  <img key={p.id} src={p.image} alt={p.name} className="rounded-lg shadow-sm" />
+                  <img
+                    key={p.id}
+                    src={p.image}
+                    alt={p.name}
+                    className="rounded-lg shadow-sm"
+                  />
                 ))}
               </div>
             </div>
@@ -89,12 +123,15 @@ function Hero() {
       <div className="container py-16 md:py-24">
         <div className="grid gap-10 md:grid-cols-2 items-center">
           <div>
-            <p className="text-sm font-semibold text-accent-foreground">Flower, Craft & Recycle</p>
+            <p className="text-sm font-semibold text-accent-foreground">
+              Flower, Craft & Recycle
+            </p>
             <h1 className="mt-2 text-4xl md:text-6xl font-extrabold tracking-tight text-primary">
               wida <span className="text-accent">florist</span>
             </h1>
             <p className="mt-4 max-w-xl text-muted-foreground">
-              Toko batik dan kerajinan. Tas batik • Baju batik • Handycraft batik.
+              Toko batik dan kerajinan. Tas batik • Baju batik • Handycraft
+              batik.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild>
@@ -108,7 +145,11 @@ function Hero() {
           <div className="relative">
             <div className="aspect-square w-full overflow-hidden rounded-3xl bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ef4444] p-1 shadow-xl">
               <div className="h-full w-full rounded-3xl bg-white/90 grid place-items-center">
-                <img src="/placeholder.svg" alt="Batik showcase" className="w-3/4 rounded-xl shadow" />
+                <img
+                  src="/placeholder.svg"
+                  alt="Batik showcase"
+                  className="w-3/4 rounded-xl shadow"
+                />
               </div>
             </div>
           </div>
@@ -125,12 +166,22 @@ function CTA() {
         <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-[#fb923c] via-[#f97316] to-[#ef4444] p-1">
           <div className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-white/95 p-8 md:flex-row md:items-center">
             <div>
-              <h3 className="text-2xl font-extrabold tracking-tight text-primary">Pesan dalam jumlah besar?</h3>
-              <p className="mt-1 text-muted-foreground">Kami menerima pesanan seragam, hampers, dan custom gift set.</p>
+              <h3 className="text-2xl font-extrabold tracking-tight text-primary">
+                Pesan dalam jumlah besar?
+              </h3>
+              <p className="mt-1 text-muted-foreground">
+                Kami menerima pesanan seragam, hampers, dan custom gift set.
+              </p>
             </div>
             <div className="flex gap-3">
               <Button asChild>
-                <a href="https://wa.me/6281806793324" target="_blank" rel="noreferrer noopener">Chat WhatsApp</a>
+                <a
+                  href="https://wa.me/6281806793324"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Chat WhatsApp
+                </a>
               </Button>
               <Button variant="secondary" asChild>
                 <Link to="/contact">Detail kontak</Link>

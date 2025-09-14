@@ -16,7 +16,12 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <FlowerIcon className="h-7 w-7 text-accent" />
-          <span className="text-xl font-extrabold tracking-tight text-primary">wida <span className="text-accent-foreground bg-accent/80 px-1 rounded">florist</span></span>
+          <span className="text-xl font-extrabold tracking-tight text-primary">
+            wida{" "}
+            <span className="text-accent-foreground bg-accent/80 px-1 rounded">
+              florist
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -63,7 +68,9 @@ export default function Header() {
                 className={({ isActive }) =>
                   cn(
                     "text-sm font-medium whitespace-nowrap px-1 pb-1",
-                    isActive ? "text-primary border-b-2 border-primary" : "text-muted-foreground",
+                    isActive
+                      ? "text-primary border-b-2 border-primary"
+                      : "text-muted-foreground",
                   )
                 }
               >
